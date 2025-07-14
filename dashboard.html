@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajibade Mini Mart</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-custom-gray: #f9f9f9;
+        --color-custom-text: #333;
+        --color-custom-subActive: #f4ede0;
+        --color-active: #cfa66e;
+      }
+    </style>
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body class="bg-custom-gray">
+    <!-- side bar -->
+    <aside
+      class="bg-white hidden md:block max-w-[16rem] w-full h-screen fixed top-0 left-0 border-r border-gray-200"
+    >
+      <h3 class="text-2xl font-bold py-8 text-center">Errandly</h3>
+
+      <ul class="flex flex-col gap-3 mt-4 pr-4 overflow-y-auto">
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 bg-custom-subActive text-black"
+          >
+            <i class="bi bi-border-all text-xl"></i> <span>Dashboard</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-building text-xl"></i> <span>Orders</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-bag-check-fill text-xl"></i>
+            <span>Services/products</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-file-person text-xl"></i> <span>Bookings</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-file-person text-xl"></i> <span>My Rider's</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-calendar3 text-xl"></i>
+            <span>KYC & Profile</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-envelope-fill text-xl"></i> <span>Messages</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-file-earmark-richtext-fill text-xl"></i>
+            <span>Reports & Analytics</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-file-earmark-richtext-fill text-xl"></i>
+            <span>Settings</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            href=""
+            class="flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-custom-subActive"
+          >
+            <i class="bi bi-file-earmark-richtext-fill text-xl"></i>
+            <span>Logout</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <main class="md:pl-[16rem] relative">
+      <!-- nav section -->
+      <nav
+        class="bg-white flex flex-col-reverse gap-3 sm:flex-row sticky top-0 items-center justify-between px-4 sm:px-8 py-3 border-b border-gray-200"
+      >
+        <label
+          for="search"
+          class="bg-custom-gray relative text-xs sm:max-w-[20rem] w-full rounded-lg overflow-hidden"
+        >
+          <i class="bi bi-search absolute left-2 top-1/2 -translate-y-1/2"></i>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search..."
+            class="w-full py-2 pl-8 px-2 focus:outline-none"
+          />
+        </label>
+
+        <div class="flex items-center gap-4">
+          <i class="bi bi-info-circle text-2xl"></i>
+          <i class="bi bi-bell text-2xl"></i>
+
+          <div class="flex items-center gap-1">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="profile"
+              class="size-9 shrink-0 rounded-full object-cover"
+            />
+
+            <div>
+              <h3>Ajibade</h3>
+              <p class="text-xs text-gray-400">Storiefoodie</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main content -->
+      <section class="p-8 max-sm:px-4">
+        <div class="flex justify-between items-center gap-8 max-sm:flex-col">
+          <h1 class="text-3xl text-black font-bold">Ajibade Mini Mart</h1>
+          <button
+            class="px-4 py-2 bg-custom-subActive rounded-lg text-custom-text cursor-pointer hover:bg-active"
+          >
+            Quick Action
+            <i class="bi bi-arrow-down-short"></i>
+          </button>
+        </div>
+
+        <!-- form container -->
+        <div class="mt-8 w-full max-w-2xl mx-auto bg-white rounded-lg p-8">
+          <div
+            class="size-10 cursor-pointer rounded-full bg-gray-300 grid place-items-center"
+          >
+            <i class="bi bi-arrow-left text-xl text-success"></i>
+          </div>
+
+          <h2 class="text-2xl text-black font-bold mt-4">
+            Update Business Profile
+          </h2>
+
+          <h4 class="text-base text-gray-500 font-bold mt-4">
+            Basic Information
+            <a href="#" class="underline text-active ml-16">Legal & kyc</a>
+          </h4>
+
+          <form action="#" class="mt-4 space-y-4">
+            <div class="flex flex-col gap-1">
+              <label class="text-sm text-gray-500">RC Number (CAC)</label>
+              <input
+                type="text"
+                class="border border-gray-200 rounded-lg py-2 px-4 focus:outline-none focus:ring"
+                placeholder="Enter rc number here"
+              />
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <label class="text-sm text-gray-500"
+                >Tax Identification Number</label
+              >
+              <input
+                type="text"
+                class="border border-gray-200 rounded-lg py-2 px-4 focus:outline-none focus:ring"
+                placeholder="Enter tax identification number here"
+              />
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <label for="select-box" class="text-sm text-gray-500"
+                >Business Type</label
+              >
+              <select
+                name="select-box"
+                id="select-box"
+                class="border border-gray-200 rounded-lg py-2 px-4 focus:outline-none focus:ring"
+              >
+                <option value="">Select</option>
+                <option value="tech-solutions">Tech Solutions</option>
+                <option value="real-estate">Real Estate</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <span class="text-sm text-gray-500"
+                >Upload Business Logo Below</span
+              >
+              <input type="file" id="my-img" class="hidden" />
+
+              <label
+                for="my-img"
+                class="border border-gray-200 rounded-lg py-6 bg-gray-100 px-4 flex flex-col items-center justify-center gap-1 cursor-pointer"
+              >
+                <div
+                  class="size-10 rounded border border-gray-200 text-gray-400 grid place-items-center"
+                >
+                  <i class="bi bi-cloud-arrow-down text-xl"></i>
+                </div>
+
+                <span class="text-base text-black"
+                  ><span class="text-gray-400 font-bold">Click to upload</span>
+                  or drag and drop</span
+                >
+                <span class="text-xs text-gray-400"
+                  >SVG, PNG, JPG or GIF (max. 800×400px)</span
+                >
+              </label>
+            </div>
+
+            <div class="flex justify-center mt-16">
+              <input
+                type="submit"
+                value="Save Profile"
+                class="px-4 py-3 w-full max-w-[20rem] mx-auto bg-active rounded-lg text-white cursor-pointer hover:bg-active"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
