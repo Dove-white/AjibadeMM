@@ -278,29 +278,25 @@
       const sidebar = document.getElementById("sidebar");
       const overlay = document.getElementById("overlay");
 
-      openMenu.addEventListener("click", () => {
-        openMenu.classList.add("hidden");
-        closeMenu.classList.remove("hidden");
-        sidebar.classList.remove("-translate-x-full");
-        overlay.classList.remove("hidden");
-        overlay.classList.add("fixed");
-      });
+      function openSidebar() {
+        openMenu?.classList.add("hidden");
+        closeMenu?.classList.remove("hidden");
+        sidebar?.classList.remove("-translate-x-full");
+        overlay?.classList.remove("hidden");
+        overlay?.classList.add("fixed");
+      }
 
-      closeMenu.addEventListener("click", () => {
-        openMenu.classList.remove("hidden");
-        closeMenu.classList.add("hidden");
-        sidebar.classList.add("-translate-x-full");
-        overlay.classList.remove("fixed");
-        overlay.classList.add("hidden");
-      });
+      function closeSidebar() {
+        openMenu?.classList.remove("hidden");
+        closeMenu?.classList.add("hidden");
+        sidebar?.classList.add("-translate-x-full");
+        overlay?.classList.remove("fixed");
+        overlay?.classList.add("hidden");
+      }
 
-      overlay.addEventListener("click", () => {
-        openMenu.classList.remove("hidden");
-        closeMenu.classList.add("hidden");
-        sidebar.classList.add("-translate-x-full");
-        overlay.classList.remove("fixed");
-        overlay.classList.add("hidden");
-      });
+      openMenu?.addEventListener("click", openSidebar);
+      closeMenu?.addEventListener("click", closeSidebar);
+      overlay?.addEventListener("click", closeSidebar);
     </script>
   </body>
 </html>
