@@ -26,7 +26,8 @@
   <body class="bg-custom-gray">
     <!-- side bar -->
     <aside
-      class="bg-white hidden md:block max-w-[16rem] w-full h-screen fixed top-0 left-0 border-r border-gray-200"
+      id="sidebar"
+      class="bg-white z-20 transition-all -translate-x-full md:translate-x-0 max-w-[16rem] w-full h-screen fixed top-0 left-0 border-r border-gray-200"
     >
       <h3 class="text-2xl font-bold py-8 text-center">Errandly</h3>
 
@@ -119,6 +120,11 @@
       </ul>
     </aside>
 
+    <div
+      id="overlay"
+      class="md:hidden hidden inset-0 z-10 w-full h-full bg-black/50"
+    ></div>
+
     <main class="md:pl-[16rem] relative">
       <!-- nav section -->
       <nav
@@ -137,7 +143,7 @@
           />
         </label>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 w-full md:w-fit">
           <i class="bi bi-info-circle text-2xl"></i>
           <i class="bi bi-bell text-2xl"></i>
 
@@ -152,6 +158,13 @@
               <h3>Ajibade</h3>
               <p class="text-xs text-gray-400">Storiefoodie</p>
             </div>
+          </div>
+
+          <div
+            class="size-10 relative z-20 cursor-pointer rounded-full bg-gray-300 grid place-items-center ml-auto md:hidden"
+          >
+            <i id="open-menu" class="bi bi-list text-2xl"></i>
+            <i id="close-menu" class="bi bi-x-lg text-2xl hidden"></i>
           </div>
         </div>
       </nav>
@@ -258,5 +271,36 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const openMenu = document.getElementById("open-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      openMenu.addEventListener("click", () => {
+        openMenu.classList.add("hidden");
+        closeMenu.classList.remove("hidden");
+        sidebar.classList.remove("-translate-x-full");
+        overlay.classList.remove("hidden");
+        overlay.classList.add("fixed");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        openMenu.classList.remove("hidden");
+        closeMenu.classList.add("hidden");
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.remove("fixed");
+        overlay.classList.add("hidden");
+      });
+
+      overlay.addEventListener("click", () => {
+        openMenu.classList.remove("hidden");
+        closeMenu.classList.add("hidden");
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.remove("fixed");
+        overlay.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
